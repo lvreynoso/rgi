@@ -135,9 +135,9 @@ class CARDkmers(object):
         bit-wise flag reference: http://blog.nextgenetics.net/?e=18
         """
         qname, model, flag, mapq = header.split("__")
+        logger.info(f"qname: {qname}\nmodel: {model}\nflag: {flag}\nmapq: {mapq}")
 
         if flag.isdigit() is False:
-            logger.info(f"qname: {qname}\nmodel: {model}\nflag: {flag}\nmapq: {mapq}")
             logger.error("failed to parse BAM file: {}, please check which aligner software was used to produce the BAM file in the RGI BWT step.".format(self.input_bam_file))
             exit()
         else:
