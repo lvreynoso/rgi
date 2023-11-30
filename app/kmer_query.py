@@ -226,7 +226,7 @@ class CARDkmers(object):
                     if x.split()[0] == contig_id:
                         orf_id = x
             elif type == 'bwt':
-                read, model, flag, mapq = self.get_bwt_alignment_data(entry.id)
+                read, model, flag, mapq = self.get_bwt_alignment_data(entry.description)
             elif type == "fasta":
                 read = entry.id
             else:
