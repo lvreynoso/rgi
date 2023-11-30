@@ -186,7 +186,6 @@ class Variant(BaseModel):
 													sinsidedict["hit_start"] = (hsp.sbjct_start-1)*3
 													sinsidedict["hit_end"] = (hsp.sbjct_end)*3
 
-
 													if orf_info.decode().split(' # ')[0] in predicted_genes_dict:
 														sinsidedict["orf_dna_sequence"] = predicted_genes_dict[orf_info.decode().split(' # ')[0]]
 														# sinsidedict["orf_prot_sequence"] = str(Seq(predicted_genes_dict[orf_info.decode().split(' # ')[0]], generic_dna).translate(table=11)).strip("*")

@@ -171,7 +171,6 @@ class Overexpression(BaseModel):
 										ppinsidedict["hit_start"] = (hsp.sbjct_start-1)*3
 										ppinsidedict["hit_end"] = (hsp.sbjct_end)*3
 
-
 										if orfInfo.decode().split(' # ')[0] in predicted_genes_dict:
 											ppinsidedict["orf_dna_sequence"] = predicted_genes_dict[orfInfo.decode().split(' # ')[0]]
 											ppinsidedict["orf_prot_sequence"] = str(Seq(predicted_genes_dict[orfInfo.decode().split(' # ')[0]]).translate(table=11)).strip("*")
@@ -318,7 +317,6 @@ class Overexpression(BaseModel):
 												insidedict["orf_from"] = self.extract_nth_hash(orfInfo.decode(), 0).rstrip()
 												insidedict["hit_start"] = (hsp.sbjct_start-1)*3
 												insidedict["hit_end"] = (hsp.sbjct_end)*3
-
 												if orfInfo.decode().split(' # ')[0] in predicted_genes_dict:
 													insidedict["orf_dna_sequence"] = predicted_genes_dict[orfInfo.decode().split(' # ')[0]]
 													insidedict["orf_prot_sequence"] = str(Seq(predicted_genes_dict[orfInfo.decode().split(' # ')[0]]).translate(table=11)).strip("*")
